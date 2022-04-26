@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.scrollbar-minimal::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scrollbar-minimal::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.scrollbar-minimal::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+    outline: 1px solid #708090;
+}
+
+.absolute-centered {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.card {
+    @apply p-4;
+    @apply border-2 border-neutral-200 dark:border-neutral-800 rounded-lg;
+}

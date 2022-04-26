@@ -1,0 +1,20 @@
+
+.WorldClock {
+    
+    @apply mt-10 mx-auto;
+    @apply grid grid-flow-col auto-cols-max gap-4;
+    @apply text-xl;
+    
+    .clock {
+        
+        @apply flex flex-col justify-center text-center;
+        @apply px-6 py-4 bg-neutral-300 dark:bg-stone-900;
+        @apply rounded-lg;
+        
+        span:first-child {
+            @apply mb-2 text-2xl;
+        }
+        
+    }
+    
+}

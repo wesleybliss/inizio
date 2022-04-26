@@ -1,0 +1,29 @@
+
+.Weather {
+    
+    .temp {
+        @apply text-3xl;
+    }
+    
+    .feels-like {
+        
+    }
+    
+    .weather {
+        @apply text-xl;
+    }
+    
+    .timezone {
+        
+    }
+    
+    .sunrise {
+        
+    }
+    
+    .sunset {
+        
+    }
+    
+    
+}

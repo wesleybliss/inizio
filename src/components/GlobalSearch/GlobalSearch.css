@@ -1,0 +1,22 @@
+
+.GlobalSearch {
+    
+    @apply w-full mt-10 flex justify-center;
+    
+    input[type="text"] {
+        
+        @apply w-1/2 px-6 py-4;
+        @apply text-xl text-center;
+        @apply bg-neutral-200 dark:bg-neutral-800;
+        @apply border-2 outline-none;
+        @apply placeholder:text-neutral-400 dark:placeholder:text-neutral-700;
+        
+        @apply border-neutral-200 rounded;
+        @apply active:border-neutral-300 focus:border-neutral-300;
+        
+        @apply dark:border-neutral-800 rounded;
+        @apply active:border-neutral-700 focus:border-neutral-700;
+        
+    }
+    
+}
