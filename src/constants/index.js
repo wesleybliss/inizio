@@ -7,8 +7,11 @@ const key = value => {
     keys[value] = `${NS}.${value}`
 }
 
-key('theme')
-key('weatherUnits')
+key('theme') // Light or dark
+key('weatherUnits') // Imperial or otherwise
+key('weatherLastUpdatedAt') // Timestamp
+key('weatherUpdateFrequency') // In hours
+key('weatherLastForecast') // In hours
 
 //
 

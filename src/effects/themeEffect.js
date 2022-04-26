@@ -5,27 +5,31 @@ export const useThemeEffect = () => {
     
     const [theme, setTheme] = useState('dark')
     
-    const applyTheme = () => {
+    const applyTheme = newTheme => {
         themes.forEach(it => {
             if (document.documentElement.classList.contains(it))
                 document.documentElement.classList.remove(it)
         })
-        document.documentElement.classList.add(theme)
+        document.documentElement.classList.add(newTheme)
+    }
+    
+    const updateTheme = newTheme => {
+        setTheme(newTheme)
+        applyTheme(newTheme)
+        localStorage.setItem(keys.theme, newTheme)
     }
     
     const switchTheme = () => {
-        const value = theme === 'dark' ? 'light' : 'dark'
-        console.log('useThemeEffect: switchTheme', value)
-        setTheme(value)
-        applyTheme(value)
-        localStorage.setItem(keys.theme, value)
+        const newTheme = theme === 'dark' ? 'light' : 'dark'
+        // console.log('useThemeEffect: switchTheme', newTheme)
+        updateTheme(newTheme)
     }
     
     useEffect(() => {
         try {
             const savedTheme = localStorage.getItem(keys.theme) || 'dark'
-            console.log('useThemeEffect: initial theme', savedTheme)
-            switchTheme(savedTheme)
+            // console.log('useThemeEffect: initial theme', savedTheme)
+            updateTheme(savedTheme)
         } catch (e) {
             console.error('useThemeEffect:', e)
         }

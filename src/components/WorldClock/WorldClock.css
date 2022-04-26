@@ -17,4 +17,8 @@
         
     }
     
+    .clock-current-tz {
+        @apply border border-neutral-300 dark:border-neutral-700;
+    }
+    
 }
